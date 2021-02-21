@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{matrix.node-version}}
-      # - uses: expo/expo-github-action@v5
-      #   with:
-      #     expo-version: 4.x
-      #     expo-username: ${{secrets.EXPO_CLI_USERNAME}}
-      #     expo-password: ${{secrets.EXPO_CLI_PASSWORD}}
-      # - name: Install dependencies
-      #   run: npm install
-      # - name: Publish to expo
-      #   run: expo publish
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 4.x
+          expo-username: ${{secrets.EXPO_CLI_USERNAME}}
+          expo-password: ${{secrets.EXPO_CLI_PASSWORD}}
+      - name: Install dependencies
+        run: npm install
+      - name: Publish to expo
+        run: expo publish
